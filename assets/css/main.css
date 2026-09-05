@@ -2733,3 +2733,64 @@ a,
         font-size: 26px;
     }
 }
+
+
+
+/* Home Slider */
+.home-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.home-slide {
+    display: none;
+    width: 100%;
+    animation: homeSlideFade 0.8s ease;
+}
+
+.home-slide.active {
+    display: block;
+}
+
+@keyframes homeSlideFade {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* Slider Dots */
+.home-slider-dots {
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 10;
+}
+
+.slider-dot {
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: #ffffff;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.slider-dot.active {
+    opacity: 1;
+    transform: scale(1.3);
+}
